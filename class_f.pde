@@ -1,24 +1,35 @@
 Ball b;
 Ball[] balls = new Ball[5];
 class Ball{
-  float x, y;
+  private float x;
+  float y;
   float speed;
   Ball(float startX, float startY, float startspeed){
+
     x=startX;
     y=startY;
    speed=startspeed;
   }
-
+  
   void display(){
     ellipse(x, y, 20, 20);
   }
-
+  
+      float getX(){
+      return X ;
+    }
+    float setX(float newX){
+      return X=newX;
+    }
+    
 void move(){
  y += speed;
- if (y < height);
+ if (y < height){
+  y *= speed;
+ }
 
 }
-}
+
     void setup(){
     size(500, 500);
     b = new Ball(100,100, 400);
@@ -28,11 +39,12 @@ void move(){
     }
     
     void draw(){ 
-    background(255, 255, 255);
-     for(int i = 0; i < balls.length; i++){
-    
+       for(int i = 0; i < balls.length; i++){
+    background(1, 1, 1);
     b.display();
     b.move();
     
      }
       }    
+      
+      
